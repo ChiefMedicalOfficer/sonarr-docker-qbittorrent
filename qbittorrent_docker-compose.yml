@@ -12,7 +12,7 @@ services:
       - WEBUI_PORT=8282
     volumes:
       - ~/qbittorrent/config:/config
-      - /media/8tb/data:/data
+      - /media/8tb/data:/data           # replicate this line in each docker container that will use hardlinks
     ports:
       - 17905:17905
       - 17905:17905/udp
