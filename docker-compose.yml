@@ -1,20 +1,18 @@
---- 
-version: "2" 
+---
+version: "2"
 services:
-  qbittorrent:
-    image: linuxserver/qbittorrent
-    container_name: qbittorrent
+  sonarr:
+    image: linuxserver/sonarr:preview
+    container_name: sonarrnew
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - UMASK_SET=022
-      - WEBUI_PORT=8282
+      - UMASK_SET=022 #optional
+# For hardlinks to work across containers the volumes must match with sonarr and be a top level directory
     volumes:
-      - ~/qbittorrent/config:/config
+      - /home/gandalf/sonarrnew:/config
       - /media/8tb/data:/data
     ports:
-      - 17905:17905
-      - 17905:17905/udp
-      - 8282:8282
+      - 9292:9292
     restart: unless-stopped
