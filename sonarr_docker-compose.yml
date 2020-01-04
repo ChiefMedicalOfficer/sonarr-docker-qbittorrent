@@ -10,7 +10,7 @@ services:
       - TZ=Europe/London
       - UMASK_SET=022 #optional
     volumes:
-      - /home/gandalf/sonarrnew:/config
+      - /home/chiefmedicalofficer/sonarrnew:/config
       - /media/8tb/data:/data           # replicate this line in each docker container that will use hardlinks
     ports:
       - 9292:9292
