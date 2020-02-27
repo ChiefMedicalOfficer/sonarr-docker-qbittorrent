@@ -24,4 +24,4 @@ volumes:
       
 ```
 
-Then when setting up a new TV show in Sonarr you can pick any folder [TV] **below** "data" for you shows.
+Then when setting up a new TV show in Sonarr you can pick any folder [TV] **below** "data" for your shows.
